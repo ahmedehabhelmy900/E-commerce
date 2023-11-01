@@ -1,0 +1,46 @@
+.navBar {
+  background-color: #eee;
+}
+.navBar .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .navBar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.navBar .container .navUl {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.navBar .container .navUl li {
+  cursor: pointer;
+  position: relative;
+}
+.navBar .container .navUl li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: orange;
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  transition-duration: 0.3s;
+}
+.navBar .container .navUl li.active {
+  color: orange;
+}
+.navBar .container .navUl li.active::after {
+  width: calc(100% + 10px);
+}
+.navBar .container .navUl li:hover {
+  color: orange;
+}
+.navBar .container .navUl li:hover::after {
+  width: calc(100% + 10px);
+}/*# sourceMappingURL=navbar.css.map */
