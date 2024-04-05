@@ -3,6 +3,9 @@
   .container {
     display: flex;
   justify-content: space-between;
+  a {
+    color: black;
+  }
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
@@ -12,9 +15,11 @@
     display: flex;
     gap: 15px;
     align-items: center;
-    li {
+  li {
       cursor: pointer;
       position: relative;
+      font-weight: 500;
+      font-size: 17px;
       &::after {
         content: "";
         display: block;
@@ -27,7 +32,8 @@
         transition-duration: .3s;
       }
       &.active {
-        color: orange;
+        a{
+        color: orange;}
         &::after {
           width: calc(100% + 10px);
         }

@@ -1,0 +1,47 @@
+div{
+  .cate {
+    button {
+      background-color: orange;
+      border: none;
+      margin: 10px;
+      color: white;
+      padding: 5px;
+      cursor: pointer;
+      &.active {
+        background-color: black;
+      }
+    }
+  }
+  .allProducts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    padding-bottom: 50px;
+    .product {
+      overflow: hidden;
+      border: 2px #eee solid;
+      padding: 10px;
+      position: relative;
+      img {
+        max-width: 300px;
+        height: 200px;
+      }
+      .price {
+        font-weight: bold;
+      }
+      .more {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        color: rgb(25, 0, 255);
+        .goMoreArr {
+          margin-bottom: -4px;
+        }
+      }
+    }
+  }
+}

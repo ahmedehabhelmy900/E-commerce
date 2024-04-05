@@ -1,0 +1,41 @@
+form {
+  display: flex;
+  gap: 20px;
+  margin: 100px 0;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    div {
+      width: 100% !important;
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    textarea {
+        height: 140px;
+      }
+    * {
+      height: 40px;
+      padding: 10px 15px;
+      font-size: 15px;
+      border: 2px #888 solid;
+      background-color: rgba(218, 218, 218, 0.19);
+      &:focus {
+        outline-color: orange;
+        &::placeholder {
+          opacity: 0;
+          transition-duration: .3s;
+        }
+      }
+      &.submit {
+        background-color: orange;
+        color: white;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

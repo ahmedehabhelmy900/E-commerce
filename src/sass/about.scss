@@ -1,0 +1,32 @@
+.about {
+  background-image: url(../img/05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 85.875px);
+  @media (max-width: 600px) {
+    height: calc(100vh - 138.875px);
+}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0,0.7);
+  }
+  .text {
+    z-index: 2;
+    color: white;
+    max-width: 400px;
+    p {
+      font-size: 18px;
+    }
+  }
+}
